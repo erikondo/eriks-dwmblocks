@@ -4,9 +4,8 @@ LDFLAGS = -lX11
 
 output: dwmblocks.c config.def.h config.h
 	${CC}  dwmblocks.c $(LDFLAGS) -o dwmblocks
-config.h:
+config.h: config.def.h
 	cp config.def.h $@
-
 
 clean:
 	rm -f *.o *.gch dwmblocks

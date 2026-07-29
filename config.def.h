@@ -4,8 +4,9 @@ static const Block blocks[] = {
 	{"Mem:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	30,		0},
 
 	{"", "sb-clock",					5,		0},
+	{"", "sb-battery",					5,		0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
-static char delim[] = " | ";
+static char delim[] = "|";
 static unsigned int delimLen = 5;
